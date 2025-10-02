@@ -6,12 +6,12 @@
 
 class Stitcher {
 public:
-    Stitcher(const std::vector<std::string>& files, const std::string& outputPath);
-    ~Stitcher();
-    void execute();
+	Stitcher(const std::vector<std::string>& files, const std::string& outputPath);
+	~Stitcher();
+	void execute();
 private:
-    std::vector<std::string> videoFiles;
-    std::string outputVideo;
+	std::vector<std::string> videoFiles;
+	std::string outputVideo;
 };
 
 #endif

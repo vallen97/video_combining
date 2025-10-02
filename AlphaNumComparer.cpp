@@ -2,13 +2,9 @@
 #include <regex>
 #include <cstdlib>
 
-AlphaNumComparer::AlphaNumComparer() {
-	// Constructor (no dynamic resources used)
-}
+AlphaNumComparer::AlphaNumComparer() {}
 
-AlphaNumComparer::~AlphaNumComparer() {
-	// Destructor (no cleanup needed)
-}
+AlphaNumComparer::~AlphaNumComparer() {}
 
 // Constructor of ParsedString: parse once on creation
 AlphaNumComparer::ParsedString::ParsedString(const std::string& s) : original(s), numericSuffix(0) {

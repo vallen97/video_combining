@@ -172,6 +172,7 @@
   <ItemGroup>
     <ClCompile Include="AlphaNumComparer.cpp" />
     <ClCompile Include="DirectoryReader.cpp" />
+    <ClCompile Include="generateFFmpegAudioVideoMerge.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OutputWriter.cpp" />
     <ClCompile Include="Stitcher.cpp" />
@@ -179,6 +180,7 @@
   <ItemGroup>
     <ClInclude Include="AlphaNumComparer.h" />
     <ClInclude Include="DirectoryReader.h" />
+    <ClInclude Include="generateFFmpegAudioVideoMerge.h" />
     <ClInclude Include="OutputWriter.h" />
     <ClInclude Include="Stitcher.h" />
   </ItemGroup>

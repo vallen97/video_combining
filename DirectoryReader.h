@@ -6,11 +6,11 @@
 
 class DirectoryReader {
 public:
-    explicit DirectoryReader(const std::string& directoryPath);
-    ~DirectoryReader();
-    std::vector<std::string> getVideoFiles() const;
+	explicit DirectoryReader(const std::string& directoryPath);
+	~DirectoryReader();
+	std::vector<std::string> getVideoFiles() const;
 private:
-    std::string directoryPath;
+	std::string directoryPath;
 };
 
 #endif

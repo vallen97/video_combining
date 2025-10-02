@@ -28,6 +28,6 @@ std::vector<std::string> DirectoryReader::getVideoFiles() const {
 			}
 		}
 	}
-	//std::sort(fileNames.begin(), fileNames.end());
+	std::sort(fileNames.begin(), fileNames.end());
 	return fileNames;
 }

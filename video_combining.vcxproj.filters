@@ -30,6 +30,9 @@
     <ClCompile Include="AlphaNumComparer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="generateFFmpegAudioVideoMerge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DirectoryReader.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AlphaNumComparer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generateFFmpegAudioVideoMerge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

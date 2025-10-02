@@ -63,7 +63,6 @@ int main() {
 	// Testing if opencv can load a video and read and show the first frame
 	/*
 	{
-		std::string path = "";
 
 		std::cout << "Opening: " << path << std::endl;
 		cv::VideoCapture cap(path);
@@ -93,12 +92,17 @@ int main() {
 	*/
 	{
 		std::string path = "";
-		std::string completed = "";
+		std::string completed_org = "";
 
 		std::filesystem::path completed = getOrCreateCompletedStitchingDir();
 		std::cout << "Output folder set to: " << completed << std::endl;
 
-		std::string output = completed + "stitched_result.mp4";
+		//// Now you can combine outputFolder with your filename to generate output paths
+		//std::filesystem::path outputFile = completed / "stitched_result.mp4";
+		//std::cout << "Full output video path: " << outputFile << std::endl;
+
+		std::string output = completed_org + "stitched_result.mp4";
+		//std::string output = completed << "stitched_result.mp4";
 
 		DirectoryReader dirReader(path);
 		std::vector<std::string> videos = dirReader.getVideoFiles();
@@ -119,12 +123,17 @@ int main() {
 			std::cout << pf.original << "\n";
 		}
 
-		if (videos.empty()) {
-			std::cout << "No video files found." << std::endl;
-			return 1;
-		}
-		Stitcher stitcher(videos, output);
-		stitcher.execute();
+		//if (videos.empty()) {
+		//	std::cout << "No video files found." << std::endl;
+		//	return 1;
+		//}
+		//Stitcher stitcher(videos, output);
+		//stitcher.execute();
+
+		// std::cout << cv::getBuildInformation() << std::endl;
+
+
+		// testOpenCV(sampleVideoPath);
 
 		return 0;
 	}

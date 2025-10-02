@@ -6,12 +6,12 @@
 
 class OutputWriter {
 public:
-    OutputWriter(const std::string& outputPath, double fps, cv::Size size);
-    ~OutputWriter();
-    void writeFrame(const cv::Mat& frame);
-    bool isOpened() const;
+	OutputWriter(const std::string& outputPath, double fps, cv::Size size);
+	~OutputWriter();
+	void writeFrame(const cv::Mat& frame);
+	bool isOpened() const;
 private:
-    cv::VideoWriter writer;
+	cv::VideoWriter writer;
 };
 
 #endif
