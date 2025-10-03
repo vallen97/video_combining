@@ -91,15 +91,15 @@ int main() {
 	}
 	*/
 	{
-		std::string path = "";
-		std::string completed_org = "";
+		std::string path = "Full path to video folder";
+		std::string completed_org = "FullPathTtoProjectFolder/video_combining/video_combining/completed_stitching/";
 
 		std::filesystem::path completed = getOrCreateCompletedStitchingDir();
 		std::cout << "Output folder set to: " << completed << std::endl;
 
 		//// Now you can combine outputFolder with your filename to generate output paths
-		//std::filesystem::path outputFile = completed / "stitched_result.mp4";
-		//std::cout << "Full output video path: " << outputFile << std::endl;
+		std::filesystem::path outputFile = completed / "stitched_result.mp4";
+		std::cout << "Full output video path: " << outputFile << std::endl;
 
 		std::string output = completed_org + "stitched_result.mp4";
 		//std::string output = completed << "stitched_result.mp4";
@@ -123,17 +123,17 @@ int main() {
 			std::cout << pf.original << "\n";
 		}
 
-		//if (videos.empty()) {
-		//	std::cout << "No video files found." << std::endl;
-		//	return 1;
-		//}
-		//Stitcher stitcher(videos, output);
-		//stitcher.execute();
+		if (videos.empty()) {
+			std::cout << "No video files found." << std::endl;
+			return 1;
+		}
+		Stitcher stitcher(videos, output);
+		stitcher.execute();
 
-		// std::cout << cv::getBuildInformation() << std::endl;
+		//std::cout << cv::getBuildInformation() << std::endl;
 
 
-		// testOpenCV(sampleVideoPath);
+		//testOpenCV(sampleVideoPath);
 
 		return 0;
 	}
